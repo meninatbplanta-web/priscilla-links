@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirmação de Inscrição - Analista Corporal</title>
+
+    <!-- Fontes (Mesmas da Home) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* --- DESIGN SYSTEM UNIFICADO (DARK THEME) --- */
+        :root {
+            --primary-dark: #0f0f0f;
+            --primary-darker: #000000;
+            --card-bg: #1f2937;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --white: #ffffff;
+
+            /* Cores de Ação */
+            --brand-red: #ef4444;
+            --brand-red-hover: #dc2626;
+            --whatsapp-green: #25D366;
+            --whatsapp-hover: #128C7E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Textura de Fundo */
+        .bg-texture {
+            position: fixed;
+            inset: 0;
+            opacity: 0.1;
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* --- HEADER SIMPLES --- */
+        .header {
+            text-align: center;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #1f2937;
+            margin-bottom: 2rem;
+            background-color: rgba(15, 15, 15, 0.95);
+        }
+
+        .brand-logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .brand-icon {
+            color: var(--brand-red);
+            /* Mantendo a identidade vermelha */
+        }
+
+        /* --- BARRA DE PROGRESSO --- */
+        .progress-section {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .steps-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            max-width: 400px;
+            margin: 0 auto 0.5rem auto;
+        }
+
+        .step-active {
+            color: var(--brand-red);
+        }
+
+        .progress-track {
+            background-color: #374151;
+            height: 8px;
+            border-radius: 4px;
+            max-width: 400px;
+            margin: 0 auto 1rem auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, var(--brand-red) 0%, #fca5a5 100%);
+            height: 100%;
+            width: 85%;
+            border-radius: 4px;
+            transition: width 1s ease-out;
+        }
+
+        .progress-text {
+            color: var(--brand-red);
+            /* Cor de destaque */
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        /* --- VIDEO SECTION --- */
+        .video-wrapper {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+            border: 1px solid #374151;
+            background-color: #000;
+            aspect-ratio: 16/9;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- TEXTOS PRINCIPAIS --- */
+        .main-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            text-align: center;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+        }
+
+        .main-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- CARDS --- */
+        .card-box {
+            background-color: var(--card-bg);
+            border-radius: 1rem;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            border: 1px solid #374151;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Card Importante (Grupo VIP) */
+        .important-header {
+            background-color: var(--brand-red);
+            /* Mantendo identidade vermelha */
+            color: var(--white);
+            text-align: center;
+            padding: 1rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .card-body {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .card-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .card-text {
+            color: #d1d5db;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .card-text strong {
+            color: var(--white);
+        }
+
+        /* Card Compartilhar */
+        .share-icon {
+            background-color: #fce7f3;
+            /* Rosa bem claro, ou cinza claro */
+            color: #db2777;
+            /* Rosa escuro */
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem auto;
+            /* Adaptação para Dark Theme: */
+            background-color: rgba(239, 68, 68, 0.1);
+            color: var(--brand-red);
+        }
+
+        /* --- BOTÕES --- */
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            background-color: var(--whatsapp-green);
+            color: white;
+            padding: 1.25rem 2rem;
+            font-size: 1.125rem;
+            font-weight: 800;
+            border-radius: 9999px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+            box-shadow: 0 10px 15px -3px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            width: 100%;
+            line-height: 1.2;
+            text-align: center;
+            animation: pulse-green 2s infinite;
+        }
+
+        .btn-cta:hover {
+            background-color: var(--whatsapp-hover);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-subtext {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: none;
+            opacity: 0.95;
+            margin-top: 0.2rem;
+        }
+
+        /* --- MENTORA --- */
+        .mentor-section {
+            background-color: var(--white);
+            color: var(--primary-darker);
+            /* Texto escuro no fundo branco */
+            border-radius: 1rem;
+            padding: 2.5rem 2rem;
+            text-align: left;
+            /* Layout estilo prompt */
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .mentor-header h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-darker);
+        }
+
+        .mentor-header span {
+            color: var(--brand-red);
+            /* Identidade visual: roxo na ref, vermelho aqui */
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: block;
+            margin-top: 0.25rem;
+        }
+
+        .mentor-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .mentor-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #f3f4f6;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .mentor-bio {
+            font-size: 0.95rem;
+            color: #4b5563;
+            text-align: left;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            margin-top: auto;
+            padding: 2rem 0;
+            border-top: 1px solid #1f2937;
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.85rem;
+        }
+
+        /* Animações */
+        @keyframes pulse-green {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Responsividade Desktop */
+        @media (min-width: 768px) {
+            .mentor-content {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+
+            .mentor-photo {
+                width: 180px;
+                height: 180px;
+                flex-shrink: 0;
+            }
+
+            .main-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '4295733083998069');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=4295733083998069&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=973421291534906&ev=PageView&noscript=1" /></noscript>
+
+    <div class="bg-texture"></div>
+
+    <!-- Header Simples -->
+    <header class="header">
+        <div class="brand-logo">
+            <svg class="brand-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
+            </svg>
+            Analista Corporal
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Progresso -->
+        <div class="progress-section">
+            <div class="steps-labels">
+                <span>Cadastro</span>
+                <span class="step-active">Confirmação</span>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill"></div>
+            </div>
+            <p class="progress-text">Falta pouco! 85% concluído</p>
+        </div>
+
+        <!-- Vídeo -->
+        <div class="video-wrapper">
+            <video autoplay muted playsinline controls>
+                <source src="https://priscilla-moreira.com/imagens/bem-vinda.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+        </div>
+
+        <!-- Títulos -->
+        <h1 class="main-title">Inscrição Confirmada!</h1>
+        <p class="main-subtitle">
+            Sua vaga para o Minicurso Gratuito já está reservada.<br>
+            Agora, siga o passo final abaixo para não perder nada.
+        </p>
+
+        <!-- CARD 1: GRUPO VIP (Action) -->
+        <div class="card-box">
+            <div class="important-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M12 9v4" />
+                    <path
+                        d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" />
+                    <path d="M12 16h.01" />
+                </svg>
+                PASSO IMPORTANTE
+            </div>
+            <div class="card-body">
+                <h2 class="card-title">Permaneça no Grupo VIP do WhatsApp</h2>
+                <p class="card-text">
+                    É por lá que enviaremos o <strong>link de acesso às aulas</strong>, os materiais em PDF e avisos
+                    importantes para você não perder nenhum conteúdo. O grupo é silenciado e livre de spam.
+                </p>
+                <a href="https://sndflw.com/i/SH4MK0AVuVXNnV7cB7Xk" target="_blank" class="btn-cta">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                        <path
+                            d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+                    </svg>
+                    <span>
+                        ACESSAR GRUPO VIP AGORA
+                        <span class="btn-subtext">Toque no botão acima para entrar</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <!-- CARD 2: COMPARTILHAR -->
+        <div class="card-box">
+            <div class="card-body">
+                <div class="share-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                        <path d="M18 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                        <path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                        <path d="M8.7 10.7l6.6 -3.4" />
+                        <path d="M8.7 13.3l6.6 3.4" />
+                    </svg>
+                </div>
+                <h2 class="card-title">Compartilhe com quem você ama</h2>
+                <p class="card-text">
+                    Conhece alguém que também precisa aprender a ler os sinais do corpo e entender suas emoções? Convide
+                    para participar com você!
+                </p>
+                <a href="https://api.whatsapp.com/send?text=Oi!%20Acabei%20de%20me%20inscrever%20no%20Minicurso%20de%20An%C3%A1lise%20Corporal%20da%20Priscilla%20Moreira.%20%C3%89%20gratuito%20e%20vai%20ser%20incr%C3%ADvel.%20Vamos%20participar%20juntos?%20Se%20inscreve%20aqui:%20https://priscilla-moreira.com/"
+                    target="_blank" class="btn-cta"
+                    style="background-color: transparent; border: 2px solid var(--whatsapp-green); box-shadow: none; animation: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                        <path
+                            d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+                    </svg>
+                    <span>Enviar no WhatsApp</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- MENTORA SECTION -->
+        <div class="mentor-section">
+            <div class="mentor-header">
+                <h3>Quem será sua mentora</h3>
+                <span>Priscilla Moreira</span>
+            </div>
+            <div class="mentor-content">
+                <img src="https://priscilla-moreira.com/imagens/priscilla.jpeg" alt="Priscilla Moreira"
+                    class="mentor-photo">
+                <div class="mentor-bio">
+                    <p>Terapeuta e especialista em Análise Corporal, Priscilla Moreira dedicou sua carreira a entender
+                        como as emoções moldam o corpo físico.</p>
+                    <p style="margin-top: 1rem;">Com uma metodologia única e acolhedora, ela já formou milhares de
+                        alunos, ensinando como transformar o conhecimento sobre os traços de caráter em uma ferramenta
+                        poderosa de cura e autoconhecimento.</p>
+                    <p style="margin-top: 1rem;">Neste minicurso, ela compartilhará sua experiência prática para que
+                        você também possa desvendar a linguagem do corpo.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Analista Corporal. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

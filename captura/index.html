@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Minicurso gratuito: Aprenda a ler os sinais ocultos do corpo para identificar mentiras, dores emocionais e a raiz das doenças.">
+    <title>Minicurso Terapeuta Analista Corporal - Leitura Corporal e Microexpressões</title>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '4295733083998069');
+        fbq('track', 'PageView');
+    </script>
+
+    <!-- End Meta Pixel Code -->
+
+    <!-- Performance: Preconnect para iniciar conexões cedo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://priscilla-moreira.com">
+
+    <!-- Fonts: Display swap para evitar texto invisível -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* --- CSS CRÍTICO OTIMIZADO --- */
+        :root {
+            --primary-dark: #0f0f0f;
+            /* Black/Dark Gray */
+            --primary-darker: #000000;
+            /* Pure Black */
+            --primary-light: #fca5a5;
+            /* Red 300 */
+            --primary-bg: #fff1f2;
+            /* Rose 50 */
+            --cta-color: #ef4444;
+            /* Vermelho Vibrante */
+            --cta-hover: #b91c1c;
+            /* Red 700 */
+            --text-main: #111827;
+            /* Gray 900 */
+            --text-muted: #4b5563;
+            /* Gray 600 */
+            --white: #ffffff;
+
+            /* Variáveis da Identidade Visual */
+            --whatsapp-green: #25D366;
+            --whatsapp-hover: #128C7E;
+            --title-red: #ef4444;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-main);
+            background-color: var(--white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Utilitários */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .hidden-page {
+            display: none !important;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .gap-2 {
+            gap: 0.5rem;
+        }
+
+        .gap-4 {
+            gap: 1rem;
+        }
+
+        .mt-4 {
+            margin-top: 1rem;
+        }
+
+        /* Typography */
+        h1,
+        h2,
+        h3 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background-color: var(--primary-dark);
+            color: var(--white);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 4rem 1rem;
+        }
+
+        .hero-bg-texture {
+            position: absolute;
+            inset: 0;
+            opacity: 0.1;
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #ffffff;
+            background-color: var(--title-red);
+            border-radius: 9999px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(239, 68, 68, 0.3);
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        .hero-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #f3f4f6;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-headline-main {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--title-red);
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .hero-desc {
+            font-size: 1.125rem;
+            color: #d1d5db;
+            max-width: 48rem;
+            margin: 0 auto 2.5rem;
+            font-weight: 500;
+        }
+
+        /* Buttons */
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            background-color: var(--whatsapp-green);
+            color: white;
+            padding: 1.25rem 2rem;
+            font-size: 1.125rem;
+            font-weight: 800;
+            border-radius: 9999px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+            box-shadow: 0 10px 15px -3px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 500px;
+            line-height: 1.2;
+            text-align: center;
+            animation: pulse-green 2s infinite;
+        }
+
+        .btn-cta:hover {
+            background-color: var(--whatsapp-hover);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(37, 211, 102, 0.4);
+            animation: none;
+        }
+
+        .btn-subtext {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: none;
+            opacity: 0.9;
+            margin-top: 0.25rem;
+        }
+
+        /* Sections */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .bg-gray {
+            background-color: #f9fafb;
+        }
+
+        .bg-dark {
+            background-color: #111827;
+            color: white;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: var(--primary-darker);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            max-width: 40rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Connection/Pain Section */
+        .connection-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .pain-points-grid {
+            display: grid;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pain-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-left: 4px solid var(--title-red);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            text-align: left;
+        }
+
+        .pain-card h3 {
+            color: var(--title-red);
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Schedule */
+        .grid-schedule {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .schedule-card {
+            display: flex;
+            background: white;
+            border: 1px solid #f3f4f6;
+            border-left: 5px solid var(--primary-dark);
+            border-radius: 0.75rem;
+            padding: 1.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            text-align: left;
+            transition: transform 0.3s;
+            align-items: flex-start;
+        }
+
+        .schedule-card:hover {
+            transform: translateY(-2px);
+            border-left-color: var(--title-red);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .date-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 4.5rem;
+            background: #f3f4f6;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            margin-right: 1.5rem;
+            color: var(--primary-dark);
+        }
+
+        .date-day {
+            font-size: 1.5rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .date-month {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* Instructor */
+        .instructor-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .instructor-img {
+            width: 14rem;
+            height: 14rem;
+            border-radius: 50%;
+            border: 4px solid var(--white);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+        }
+
+        .instructor-bio h3 {
+            color: var(--title-red);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-top: 0.5rem;
+        }
+
+        .info-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .info-pill {
+            background-color: #f3f4f6;
+            color: #1f2937;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid #e5e7eb;
+        }
+
+        /* Last CTA */
+        .last-cta {
+            background-color: var(--primary-darker);
+            color: white;
+            padding: 6rem 1rem;
+            text-align: center;
+            background-image: radial-gradient(circle at center, #1f2937 0%, #000000 70%);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #000000;
+            color: #6b7280;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid #1f2937;
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-headline-main {
+                font-size: 3rem;
+            }
+
+            .hero-desc {
+                font-size: 1.25rem;
+            }
+
+            .grid-schedule {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .pain-points-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .instructor-wrapper {
+                flex-direction: row;
+                text-align: left;
+                justify-content: center;
+                max-width: 900px;
+                margin: 0 auto;
+            }
+
+            .instructor-text {
+                text-align: left;
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.9;
+                transform: scale(1.02);
+            }
+        }
+
+        @keyframes pulse-green {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=4295733083998069&ev=PageView&noscript=1" /></noscript>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=973421291534906&ev=PageView&noscript=1" /></noscript>
+
+    <!-- PÁGINA DE CAPTURA (LANDING) -->
+    <div id="landing-page">
+
+        <!-- 1. HERO SECTION -->
+        <section class="hero">
+            <div class="hero-bg-texture"></div>
+            <div class="container hero-content text-center">
+                <!-- Tagline mantida conforme contexto -->
+                <span class="badge">Minicurso Gratuito • De 02 a 08 de Fevereiro</span>
+
+                <h1 class="hero-title">Minicurso Terapeuta Analista Corporal</h1>
+                <span class="hero-headline-main">Imagine ler qualquer pessoa apenas olhando para o corpo.</span>
+
+                <p class="hero-desc" style="margin-bottom: 1rem;">
+                    Online, Gratuito e com Certificado
+                </p>
+                <p class="hero-desc">
+                    Participe do Minicurso Gratuito com a Psicoterapeuta Priscilla Moreira, e descubra como o
+                    corpo revela segredos, mentiras e até a raiz das doenças.
+                </p>
+
+                <div>
+                    <button onclick="handleCTAClick()" class="btn-cta">
+                        <!-- WhatsApp Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                            stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                            <path
+                                d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+                        </svg>
+                        <span>
+                            QUERO ENTRAR NO GRUPO
+                            <span class="btn-subtext">Toque para garantir sua vaga no WhatsApp</span>
+                        </span>
+                    </button>
+                    <p style="margin-top: 1rem; font-size: 0.85rem; color: #9ca3af;">
+                        🔒 Grupo silencioso no WhatsApp. Vagas limitadas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. BENEFÍCIOS (Icons Block) -->
+        <section class="section">
+            <div class="container text-center connection-content">
+                <h2 class="section-title">O que você vai aprender em 4 aulas:</h2>
+
+                <div class="pain-points-grid">
+                    <div class="pain-card">
+                        <h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path
+                                    d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                            </svg>
+                            Ler Intenções
+                        </h3>
+                        <p style="color: #4b5563; font-size: 0.95rem;">Saiba quem é verdadeiro e quem é falso com você.
+                        </p>
+                    </div>
+                    <div class="pain-card">
+                        <h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                            </svg>
+                            Origem das Doenças
+                        </h3>
+                        <p style="color: #4b5563; font-size: 0.95rem;">Descubra por que o corpo adoece e como tratar a
+                            causa emocional.</p>
+                    </div>
+                    <div class="pain-card">
+                        <h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
+                            </svg>
+                            Nova Profissão
+                        </h3>
+                        <p style="color: #4b5563; font-size: 0.95rem;">O passo a passo para trabalhar como Terapeuta
+                            Analista Corporal.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. CRONOGRAMA (Contexto das Aulas) -->
+        <section class="section bg-gray">
+            <div class="container text-center">
+                <h2 class="section-title">Cronograma do Minicurso</h2>
+                <p class="section-subtitle">4 aulas intensivas e gratuitas</p>
+
+                <div class="grid-schedule">
+                    <!-- Aula 1 -->
+                    <div class="schedule-card">
+                        <div class="date-badge">
+                            <span class="date-day">02</span>
+                            <span class="date-month">FEV</span>
+                        </div>
+                        <div>
+                            <h3 style="font-weight: 700; color: #1f2937; font-size: 1.25rem;">Qualquer pessoa pode ser
+                                uma terapeuta analista corporal?</h3>
+                            <p style="font-size: 0.95rem; color: #4b5563; margin-top: 0.5rem;">
+                                A lógica científica por trás da leitura corporal.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Aula 2 -->
+                    <div class="schedule-card">
+                        <div class="date-badge">
+                            <span class="date-day">04</span>
+                            <span class="date-month">FEV</span>
+                        </div>
+                        <div>
+                            <h3 style="font-weight: 700; color: #1f2937; font-size: 1.25rem;">Quais doenças nascem das
+                                emoções?</h3>
+                            <p style="font-size: 0.95rem; color: #4b5563; margin-top: 0.5rem;">
+                                Conectando dores físicas com problemas emocionais.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Aula 3 -->
+                    <div class="schedule-card">
+                        <div class="date-badge">
+                            <span class="date-day">06</span>
+                            <span class="date-month">FEV</span>
+                        </div>
+                        <div>
+                            <h3 style="font-weight: 700; color: #1f2937; font-size: 1.25rem;">Análise corporal ao vivo
+                            </h3>
+                            <p style="font-size: 0.95rem; color: #4b5563; margin-top: 0.5rem;">
+                                Casos reais ao vivo. Identificando traços de caráter.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Aula 4 -->
+                    <div class="schedule-card">
+                        <div class="date-badge">
+                            <span class="date-day">08</span>
+                            <span class="date-month">FEV</span>
+                        </div>
+                        <div>
+                            <h3 style="font-weight: 700; color: #1f2937; font-size: 1.25rem;">Como viver de leitura
+                                corporal?</h3>
+                            <p style="font-size: 0.95rem; color: #4b5563; margin-top: 0.5rem;">
+                                Como transformar conhecimento em carreira.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. EXPERT & DATA SECTION -->
+        <section class="section bg-white">
+            <div class="container instructor-wrapper">
+                <img src="https://priscilla-moreira.com/imagens/priscilla.jpeg" alt="Priscilla Moreira" loading="lazy"
+                    class="instructor-img" />
+                <div class="instructor-text instructor-bio">
+                    <p
+                        style="font-size: 1rem; color: #6b7280; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin-bottom: 0.5rem;">
+                        Sua Mentora</p>
+                    <h2 style="font-size: 2.25rem; font-weight: 800; color: #111827;">Priscilla Moreira</h2>
+                    <h3>Psicanalista Clínica e Forense e Perita em Leitura Corporal e Comportamental</h3>
+
+                    <div class="info-pills">
+                        <div class="info-pill">
+                            <span>📅</span> De 02 a 08 de Fevereiro
+                        </div>
+                        <div class="info-pill">
+                            <span>💸</span> 100% Online e Gratuito
+                        </div>
+                        <div class="info-pill">
+                            <span>📜</span> Com Certificado Incluso
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CTA FINAL -->
+        <section class="last-cta">
+            <div class="container" style="position: relative; z-index: 10;">
+                <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.3;">As aulas e o
+                    certificado serão enviados SOMENTE no Grupo do WhatsApp.</h2>
+
+                <button onclick="handleCTAClick()" class="btn-cta mt-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                        <path
+                            d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+                    </svg>
+                    <span>
+                        QUERO APRENDER A LER PESSOAS ➤
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p style="font-weight: 600;">© 2026 Minicurso Terapeuta Analista Corporal</p>
+                <p style="margin-top: 0.5rem; opacity: 0.7;">Evento 100% Online e Gratuito</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Script Lógico (Vanilla JS) -->
+    <script>
+        // Configurações
+        const WHATSAPP_GROUP_LINK = "https://sndflw.com/i/SH4MK0AVuVXNnV7cB7Xk";
+        const EXTERNAL_THANK_YOU_URL = "obrigado.html";
+
+        function handleCTAClick() {
+            if (typeof fbq === 'function') {
+                fbq('track', 'Lead');
+            }
+
+            // 1. Abre o WhatsApp em NOVA ABA
+            window.open(WHATSAPP_GROUP_LINK, '_blank');
+
+            // 2. Redireciona a ABA ATUAL para a página interna de obrigado
+            // Usamos um pequeno timeout para garantir que o navegador processe o window.open primeiro
+            setTimeout(function () {
+                window.location.href = EXTERNAL_THANK_YOU_URL;
+            }, 300);
+        }
+    </script>
+
+</body>
+
+</html>
