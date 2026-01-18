@@ -19,6 +19,7 @@ export default defineConfig(({ mode }) => {
           captura: path.resolve(__dirname, 'captura/index.html'),
           captura_obrigado: path.resolve(__dirname, 'captura/obrigado.html'),
           formacao: path.resolve(__dirname, 'formacao-analista/index.html'),
+          obrigado_formacao: path.resolve(__dirname, 'obrigado-formacao/index.html'),
         },
       },
     },
