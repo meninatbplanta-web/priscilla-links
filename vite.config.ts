@@ -21,6 +21,7 @@ export default defineConfig(({ mode }) => {
           formacao: path.resolve(__dirname, 'formacao-analista/index.html'),
           obrigado_formacao: path.resolve(__dirname, 'obrigado-formacao/index.html'),
           minicurso_terapeuta: path.resolve(__dirname, 'minicurso-terapeuta/index.html'),
+          analise_individual: path.resolve(__dirname, 'analise-individual/index.html'),
         },
       },
     },

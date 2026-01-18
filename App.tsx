@@ -65,6 +65,22 @@ const App: React.FC = () => {
       isHighlight: false,
       buttonText: 'Conhecer a Formação'
     },
+    {
+      id: 'analise-individual',
+      title: 'Análise Corporal Individual (Gravada)',
+      description: 'Envie sua foto e receba uma análise completa em vídeo feita pela perita Priscilla Moreira.',
+      details: [
+        'Análise Facial e Corporal',
+        'Devolutiva em Vídeo/Áudio',
+        'Sigilo Absoluto'
+      ],
+      price: 'R$ 247,00 (Oferta Limitada)',
+      url: '/analise-individual/',
+      variant: 'dark',
+      isHighlight: true,
+      tag: 'OFERTA',
+      buttonText: 'Quero Minha Análise'
+    },
   ];
 
   return (
