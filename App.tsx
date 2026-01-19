@@ -52,6 +52,21 @@ const App: React.FC = () => {
       buttonText: 'Garantir Vaga no Grupo'
     },
     {
+      id: 'analise-individual',
+      title: 'Análise Corporal Individual (Gravada)',
+      description: 'Envie sua foto e receba uma análise completa em vídeo feita pela perita Priscilla Moreira.',
+      details: [
+        'Análise Facial e Corporal',
+        'Devolutiva em Vídeo/Áudio',
+        'Sigilo Absoluto'
+      ],
+      price: 'R$ 247,00 (Oferta Limitada)',
+      url: '/analise-individual/',
+      isHighlight: true,
+      tag: 'OFERTA',
+      buttonText: 'Quero Minha Análise'
+    },
+    {
       id: 'formacao-analise',
       title: 'Formação em Análise Corporal',
       description: 'Decifre qualquer pessoa apenas olhando para o formato do corpo dela.',
@@ -64,22 +79,6 @@ const App: React.FC = () => {
       variant: 'dark',
       isHighlight: false,
       buttonText: 'Conhecer a Formação'
-    },
-    {
-      id: 'analise-individual',
-      title: 'Análise Corporal Individual (Gravada)',
-      description: 'Envie sua foto e receba uma análise completa em vídeo feita pela perita Priscilla Moreira.',
-      details: [
-        'Análise Facial e Corporal',
-        'Devolutiva em Vídeo/Áudio',
-        'Sigilo Absoluto'
-      ],
-      price: 'R$ 247,00 (Oferta Limitada)',
-      url: '/analise-individual/',
-      variant: 'dark',
-      isHighlight: true,
-      tag: 'OFERTA',
-      buttonText: 'Quero Minha Análise'
     },
   ];
 
