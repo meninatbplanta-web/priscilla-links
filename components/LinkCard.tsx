@@ -39,7 +39,7 @@ const LinkCard: React.FC<LinkItemProps> = ({
       target="_blank"
       rel="noopener noreferrer"
       className={`
-        relative block w-full mb-5 rounded-2xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg
+        relative block w-full mb-8 rounded-2xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg
         ${containerClasses}
       `}
     >

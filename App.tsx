@@ -10,7 +10,7 @@ const App: React.FC = () => {
     {
       id: 'minicurso-gratuito',
       title: 'Minicurso Terapeuta Analista Corporal',
-      image: 'https://priscilla-moreira.com/imagens/links/index-minicurso.webp',
+      image: 'https://priscilla-moreira.com/imagens/links/index-minicurso.png',
       description: 'Aprenda a ler os sinais ocultos do corpo para identificar mentiras, dores emocionais e a raiz das doenças.',
       details: [
         'Online e Gratuito',
