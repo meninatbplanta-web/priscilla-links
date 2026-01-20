@@ -12,6 +12,7 @@ const CTA_LINK = "https://chat.whatsapp.com/L123456789"; // Replace with actual 
 const AUTHOR_IMAGE = "https://priscilla-moreira.com/imagens/priscilla-pdv-2.webp";
 // Using a placeholder that resembles the dark/blue tone of the reference
 const HERO_BG_IMAGE = "https://images.unsplash.com/photo-1516575150278-77136aed6920?q=80&w=1920&auto=format&fit=crop";
+const HERO_PROFILE_IMAGE = "https://priscilla-moreira.com/imagens/priscilla-pdv-3.webp";
 
 const Button = ({ children, className = '', ...props }: any) => (
     <a
@@ -55,7 +56,7 @@ const App = () => {
         <div className="min-h-screen bg-slate-950 text-slate-50 font-sans selection:bg-yellow-500 selection:text-black">
 
             {/* Hero Section */}
-            <section className="relative pt-20 pb-32 overflow-hidden">
+            <section className="relative pt-12 pb-32 overflow-hidden">
                 {/* Background Image with Overlay */}
                 <div className="absolute inset-0 z-0">
                     <img src={HERO_BG_IMAGE} alt="Background" className="w-full h-full object-cover opacity-20 filter blur-sm" />
@@ -64,16 +65,22 @@ const App = () => {
 
                 <div className="container mx-auto px-4 relative z-10 max-w-4xl text-center">
 
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-yellow-500 text-sm font-bold uppercase tracking-wider mb-8 animate-fade-in-up">
+                    <div className="w-64 h-64 mx-auto mb-8 relative flex items-center justify-center hero-image-glow animate-fade-in-up">
+                        <div className="w-full h-full rounded-full overflow-hidden relative z-10">
+                            <img src={HERO_PROFILE_IMAGE} alt="Priscilla Moreira" className="w-full h-full object-cover hero-image-fade" />
+                        </div>
+                    </div>
+
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-yellow-500 text-sm font-bold uppercase tracking-wider mb-8 animate-fade-in-up delay-100">
                         <Calendar className="w-4 h-4" />
                         Minicurso Gratuito • 02 a 08 de Fevereiro
                     </div>
 
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 animate-fade-in-up delay-100">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 animate-fade-in-up delay-200">
                         Descubra como transformar seu <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">dom de ajudar pessoas</span> em uma das profissões mais importantes e valiosas do mundo.
                     </h1>
 
-                    <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto animate-fade-in-up delay-200">
+                    <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto animate-fade-in-up delay-300">
                         Participe do minicurso gratuito e descubra o caminho para se tornar um Terapeuta de Resultados.
                     </p>
 
@@ -187,9 +194,26 @@ const App = () => {
         .delay-100 { animation-delay: 0.1s; }
         .delay-200 { animation-delay: 0.2s; }
         .delay-300 { animation-delay: 0.3s; }
+
+        .hero-image-glow::before {
+            content: '';
+            position: absolute;
+            inset: -30px;
+            background: radial-gradient(circle, rgba(234, 179, 8, 0.5) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .hero-image-fade {
+            -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+            mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+        }
       `}</style>
 
         </div>
+    );
+};
+        </div >
     );
 };
 
