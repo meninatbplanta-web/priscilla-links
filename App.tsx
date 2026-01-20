@@ -58,10 +58,10 @@ const App: React.FC = () => {
       id: 'analise-individual',
       title: 'Análise Corporal Individual (Gravada)',
       image: 'https://priscilla-moreira.com/imagens/links/index-analise-individual.webp',
-      description: 'Envie sua foto e receba uma análise completa em vídeo feita pela perita Priscilla Moreira.',
+      description: 'Envie sua foto e receba uma análise completa em áudio feita pela perita Priscilla Moreira.',
       details: [
         'Análise Facial e Corporal',
-        'Devolutiva em Vídeo/Áudio',
+        'Devolutiva em Áudio',
         'Sigilo Absoluto'
       ],
 

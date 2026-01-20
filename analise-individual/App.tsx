@@ -5,7 +5,7 @@ import {
     Clock,
     Unlock,
     MessageCircle,
-    Video,
+    Mic,
     UserCheck
 } from 'lucide-react';
 
@@ -49,7 +49,7 @@ const App = () => {
                     </h1>
 
                     <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto font-medium animate-fade-in-up delay-200">
-                        Eu vou gravar um vídeo exclusivo contando <strong className="text-white">TUDO</strong> o que eu vejo através da sua foto (ou de quem você quiser).
+                        Eu vou gravar um áudio exclusivo contando <strong className="text-white">TUDO</strong> o que eu vejo através da sua foto (ou de quem você quiser).
                     </p>
 
                     <div className="animate-fade-in-up delay-300">
@@ -81,7 +81,7 @@ const App = () => {
 
                     <div className="bg-neutral-800 p-8 rounded-xl border border-neutral-700 hover:border-red-600/50 transition-colors">
                         <div className="bg-red-600/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                            <Video className="w-8 h-8 text-red-600" />
+                            <Mic className="w-8 h-8 text-red-600" />
                         </div>
                         <h3 className="text-xl font-bold mb-4">2. Análise da Perita</h3>
                         <p className="text-gray-400">
@@ -95,7 +95,7 @@ const App = () => {
                         </div>
                         <h3 className="text-xl font-bold mb-4">3. Receba a Devolutiva</h3>
                         <p className="text-gray-400">
-                            Você receberá um vídeo/áudio gravado exclusivamente para você com todo o mapeamento. <strong>Não é uma análise ao vivo</strong>, é uma devolutiva gravada para você ver e rever.
+                            Você receberá um áudio gravado exclusivamente para você com todo o mapeamento. <strong>Não é uma análise ao vivo</strong>, é uma devolutiva gravada para você ouvir sempre que quiser.
                         </p>
                     </div>
                 </div>
