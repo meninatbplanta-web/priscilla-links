@@ -9,6 +9,7 @@ export interface LinkItemProps {
   tag?: string;
   buttonText?: string;
   variant?: 'default' | 'dark';
+  image?: string;
 }
 
 export interface SocialLinkProps {

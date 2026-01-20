@@ -10,7 +10,8 @@ const LinkCard: React.FC<LinkItemProps> = ({
   isHighlight,
   tag,
   buttonText = "Saiba Mais",
-  variant = 'default'
+  variant = 'default',
+  image
 }) => {
   const isDark = variant === 'dark';
 
@@ -46,6 +47,12 @@ const LinkCard: React.FC<LinkItemProps> = ({
         <span className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">
           {tag}
         </span>
+      )}
+
+      {image && (
+        <div className="w-full h-48 overflow-hidden rounded-t-2xl">
+          <img src={image} alt={title} className="w-full h-full object-cover" />
+        </div>
       )}
 
       <div className="p-5">

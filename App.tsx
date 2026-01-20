@@ -10,6 +10,7 @@ const App: React.FC = () => {
     {
       id: 'minicurso-gratuito',
       title: 'Minicurso Terapeuta Analista Corporal',
+      image: 'https://priscilla-moreira.com/imagens/links/index-minicurso.webp',
       description: 'Aprenda a ler os sinais ocultos do corpo para identificar mentiras, dores emocionais e a raiz das doenças.',
       details: [
         'Online e Gratuito',
@@ -24,6 +25,7 @@ const App: React.FC = () => {
     {
       id: 'manual-400-sinais',
       title: 'Manual 400 Sinais do Corpo',
+      image: 'https://priscilla-moreira.com/imagens/links/index-400-sinais.webp',
       description: 'Dicionário visual completo para ler gestos e microexpressões.',
       details: [
         'Acesso Imediato',
@@ -38,6 +40,7 @@ const App: React.FC = () => {
     {
       id: 'grupo-terapeutico',
       title: 'Grupo Terapêutico para Terapeutas',
+      image: 'https://priscilla-moreira.com/imagens/links/index-grupo-terapeutico.webp',
       description: 'Um espaço de escuta, troca e aprofundamento emocional para quem cuida.',
       details: [
         'Encontros Semanais (Sextas, 13h-15h)',
@@ -45,7 +48,7 @@ const App: React.FC = () => {
         'Ambiente seguro para desbloquear padrões',
         'Início Imediato'
       ],
-      price: '12x R$ 99,70',
+
       url: '/grupo-terapeutico/',
       isHighlight: true,
       tag: 'NOVIDADE',
@@ -54,13 +57,14 @@ const App: React.FC = () => {
     {
       id: 'analise-individual',
       title: 'Análise Corporal Individual (Gravada)',
+      image: 'https://priscilla-moreira.com/imagens/links/index-analise-individual.webp',
       description: 'Envie sua foto e receba uma análise completa em vídeo feita pela perita Priscilla Moreira.',
       details: [
         'Análise Facial e Corporal',
         'Devolutiva em Vídeo/Áudio',
         'Sigilo Absoluto'
       ],
-      price: 'R$ 247,00 (Oferta Limitada)',
+
       url: '/analise-individual/',
       isHighlight: true,
       tag: 'OFERTA',
@@ -69,6 +73,7 @@ const App: React.FC = () => {
     {
       id: 'formacao-analise',
       title: 'Formação em Análise Corporal',
+      image: 'https://priscilla-moreira.com/imagens/links/index-formacao-analista.webp',
       description: 'Decifre qualquer pessoa apenas olhando para o formato do corpo dela.',
       details: [
         'Metodologia única e acolhedora',

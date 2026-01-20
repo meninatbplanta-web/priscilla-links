@@ -164,6 +164,28 @@ const App = () => {
                         Acesso imediato às instruções de envio da foto após a compra.
                     </p>
                 </div>
+
+                {/* Promo Alunos */}
+                <div className="max-w-md mx-auto mt-16 bg-neutral-900/50 border border-neutral-800 rounded-2xl p-8 hover:border-red-600/30 transition-colors">
+                    <div className="inline-block px-4 py-1 rounded-full bg-red-600/10 text-red-500 text-xs font-bold uppercase tracking-wider mb-4">
+                        Exclusivo para Alunos
+                    </div>
+                    <h3 className="text-2xl font-bold mb-2">Já é aluno de algum curso?</h3>
+                    <p className="text-gray-400 mb-6 text-sm">
+                        Garanta sua análise com uma condição especial de parceiro.
+                    </p>
+                    <div className="text-4xl font-black text-white mb-6">
+                        R$ 197<span className="text-xl text-gray-500 font-bold">,00</span>
+                    </div>
+                    <a
+                        href="https://chk.eduzz.com/h3ab4scl"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-6 py-3 text-base font-bold text-white border border-red-600 rounded-lg hover:bg-red-600 transition-all duration-300 w-full"
+                    >
+                        APROVEITAR DESCONTO DE ALUNO
+                    </a>
+                </div>
             </Section>
 
             <footer className="py-8 bg-black border-t border-neutral-900 text-center text-neutral-600 text-sm">
