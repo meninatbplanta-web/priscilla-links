@@ -15,7 +15,7 @@ import {
 
 // --- Constants & Data ---
 
-const CHECKOUT_LINK = "https://chk.eduzz.com/6W482P5A0Z";
+const CHECKOUT_LINK = "https://chk.eduzz.com/57qpjkr5";
 const HERO_IMAGE = "https://priscilla-moreira.com/imagens/400%20sinais%20mini.png";
 const AUTHOR_IMAGE = "https://priscilla-moreira.com/imagens/priscilla-pdv-2.webp"; // Using the one from the reference
 
