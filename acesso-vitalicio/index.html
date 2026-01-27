@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso Vitalício - Formação em Análise Corporal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Mobile-First Optimization */
+
+        /* Reset and Base Styles */
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        body {
+            font-size: 16px;
+            line-height: 1.5;
+            overflow-x: hidden;
+            padding-bottom: 90px;
+        }
+
+        /* Typography Mobile Optimization */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                line-height: 1.3;
+            }
+
+            h3 {
+                font-size: 1.125rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .text-lg {
+                font-size: 1.125rem;
+            }
+
+            .text-xl {
+                font-size: 1.25rem;
+            }
+
+            .text-2xl {
+                font-size: 1.5rem;
+            }
+
+            .text-3xl {
+                font-size: 1.875rem;
+            }
+
+            .text-4xl {
+                font-size: 2.25rem;
+            }
+        }
+
+        /* Touch Targets Optimization */
+        button,
+        .accordion-trigger {
+            min-height: 44px;
+            min-width: 44px;
+        }
+
+        .cta-button {
+            min-height: 50px;
+            font-weight: 700;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Prevent Zoom on Input Focus */
+        input,
+        textarea,
+        select {
+            font-size: 16px;
+        }
+
+        /* Better Touch Experience */
+        .accordion-trigger:active,
+        button:active {
+            transform: scale(0.98);
+            transition: transform 0.1s ease;
+        }
+
+        /* Swipe Container Enhancement */
+        .swipe-container {
+            -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x mandatory;
+        }
+
+        .testimonial-card {
+            scroll-snap-align: start;
+        }
+
+        /* Sticky CTA Enhancement */
+        .sticky-cta {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Loading States */
+        .cta-button:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        /* Performance Optimizations */
+        .hero-bg,
+        .cta-button {
+            will-change: transform;
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* High Contrast Mode Support */
+        @media (prefers-contrast: high) {
+            .cta-button {
+                border: 2px solid #ffffff;
+            }
+
+            .accordion-item {
+                border: 1px solid #000000;
+            }
+        }
+
+        /* Dark Mode Support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #000000;
+                color: #ffffff;
+            }
+
+            .bg-white {
+                background-color: #000000;
+            }
+
+            .bg-gray-50 {
+                background-color: #111111;
+            }
+
+            .text-gray-900 {
+                color: #ffffff;
+            }
+
+            .text-gray-700 {
+                color: #cccccc;
+            }
+
+            .text-gray-600 {
+                color: #aaaaaa;
+            }
+
+            .bg-gray-100 {
+                background-color: #222222;
+            }
+
+            .bg-gray-800 {
+                background-color: #333333;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+
+            .sticky-cta,
+            .cta-button {
+                display: none;
+            }
+
+            body {
+                font-size: 12pt;
+                line-height: 1.4;
+            }
+        }
+
+        /* Orientation Handling */
+        @media (orientation: landscape) and (max-height: 500px) {
+            .sticky-cta {
+                position: relative;
+            }
+        }
+
+        /* Battery Saver Mode */
+        @media (prefers-reduced-motion: reduce) {
+            .pulse-animation {
+                animation: none;
+            }
+        }
+
+        /* Memory Optimization */
+        .testimonial-card,
+        .accordion-item {
+            contain: layout style paint;
+        }
+
+        /* Network Optimization */
+        img {
+            loading: lazy;
+        }
+
+        /* Font Loading Optimization */
+        .font-display {
+            font-display: swap;
+        }
+
+        /* Critical CSS Above the Fold */
+        .hero-bg {
+            background: #000000;
+        }
+
+        .cta-button {
+            background: #dc2626;
+        }
+
+        /* Mobile Performance */
+        @media (max-width: 768px) {
+            .hero-bg {
+                background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            }
+        }
+
+        /* Battery Optimization */
+        .pulse-animation {
+            animation: pulse 3s infinite;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .pulse-animation {
+                animation: none;
+            }
+        }
+    </style>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+        }
+
+        .cta-button {
+            background: #dc2626;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #b91c1c;
+            transform: translateY(-2px);
+        }
+
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-card {
+            min-width: 280px;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-content.active {
+            max-height: 500px;
+        }
+
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+        }
+
+        .swipe-container {
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x mandatory;
+        }
+
+        .swipe-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .testimonial-card {
+            scroll-snap-align: start;
+        }
+
+        .guarantee-number {
+            font-size: 4rem;
+            font-weight: 900;
+        }
+
+        @media (max-width: 768px) {
+            .guarantee-number {
+                font-size: 3rem;
+            }
+        }
+
+        /* Hero Image Styles */
+        .hero-image-glow::before {
+            content: '';
+            position: absolute;
+            inset: -30px;
+            background: radial-gradient(circle, rgba(220, 38, 38, 0.5) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .hero-image-fade {
+            -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+            mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+
+    <!-- HERO SECTION -->
+    <section class="hero-bg text-white py-12 px-4" id="inicio">
+        <div class="max-w-sm mx-auto text-center">
+            <div class="w-64 h-64 mx-auto mb-6 relative flex items-center justify-center hero-image-glow">
+                <div class="w-full h-full rounded-full overflow-hidden relative z-10">
+                    <img src="https://priscilla-moreira.com/imagens/priscilla-pdv-3.webp" alt="Priscilla Moreira"
+                        class="w-full h-full object-cover hero-image-fade" width="256" height="256"
+                        fetchpriority="high">
+                </div>
+            </div>
+            <h1 class="text-3xl font-black leading-tight mb-4">
+                Torne o seu Conhecimento <span class="text-red-500">Vitalício</span><br>
+                e Domine a Análise Corporal<br>
+                <span class="text-red-500">Para Sempre</span>
+            </h1>
+            <p class="text-lg mb-8 leading-relaxed">
+                Você já iniciou a jornada. Agora, garanta que ela nunca tenha fim. Faça o upgrade para o acesso
+                vitalício e tenha a segurança de consultar o conteúdo sempre que precisar.
+            </p>
+
+            <!-- NOVA OFERTA VITALÍCIA -->
+            <div class="mb-6">
+
+                <div class="bg-gray-900/50 p-6 rounded-xl border border-gray-800 mb-6">
+                    <p class="text-red-400 font-bold text-sm mb-4 uppercase tracking-wider">Oferta Exclusiva para Alunos
+                        Atuais</p>
+
+                    <div class="text-center mb-6">
+                        <span class="text-gray-400 text-sm line-through block mb-1">De R$ 3.500,00</span>
+                        <span class="text-4xl font-black text-white block">12x de R$ 103,00</span>
+                        <span class="text-gray-300 text-sm block mt-1">ou R$ 997,00 à vista</span>
+                    </div>
+
+                    <a href="https://chk.eduzz.com/ct3bnfee" target="_blank"
+                        class="cta-button text-white font-bold py-4 px-6 rounded-lg text-lg w-full block mb-3 shadow-lg shadow-red-900/50 animate-pulse">
+                        QUERO ACESSO VITALÍCIO
+                    </a>
+                </div>
+
+                <!-- BOTÃO BOLETO -->
+                <a href="https://pague.lia.com.br/unipensi/oferta?offer_id=301d209e-9aa9-47f5-b252-f5e862ce6cee"
+                    target="_blank"
+                    class="bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg text-sm w-full block transition-colors border border-gray-700 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    Opção de Parcelamento no Boleto (6x R$ 199,90)
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MOTIVOS PARA O VITALÍCIO -->
+    <section class="bg-white py-12 px-4">
+        <div class="max-w-sm mx-auto">
+            <h2 class="text-2xl font-bold text-red-500 text-center mb-8">Por que garantir o Acesso Vitalício?</h2>
+
+            <div class="space-y-6">
+                <div class="flex items-start space-x-4">
+                    <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <span class="text-white font-bold text-sm">∞</span>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">O conhecimento nunca expira</h3>
+                        <p class="text-gray-600 text-sm">Esqueça os prazos. Estude no seu ritmo, revise quantas vezes
+                            quiser e mantenha o conteúdo como uma enciclopédia pessoal para consulta eterna.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <span class="text-white font-bold text-sm">↻</span>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Atualizações Constantes</h3>
+                        <p class="text-gray-600 text-sm">O ser humano evolui, e a análise corporal também. Com o
+                            vitalício, você garante acesso a todas as futuras atualizações do curso sem pagar nada a
+                            mais.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <span class="text-white font-bold text-sm">★</span>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Segurança Profissional</h3>
+                        <p class="text-gray-600 text-sm">Vai atender um cliente difícil? Precisa relembrar um traço
+                            específico? O material estará sempre lá, na palma da sua mão.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 p-4 bg-gray-100 rounded-lg text-center">
+                <p class="text-gray-800 font-medium italic">
+                    "Não é apenas um curso. É o seu manual de instruções do ser humano para a vida toda."
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- O QUE VOCÊ MANTÉM -->
+    <section class="bg-gray-50 py-12 px-4">
+        <div class="max-w-sm mx-auto">
+            <h2 class="text-2xl font-bold text-center mb-8">Tudo o que continua sendo seu</h2>
+
+            <div class="space-y-3">
+                <!-- Reaproveitando a estrutura de accordion mas com foco em "Manter" -->
+                <div class="accordion-item bg-white rounded-lg overflow-hidden">
+                    <button class="accordion-trigger w-full p-4 text-left flex justify-between items-center"
+                        onclick="toggleAccordion(this)">
+                        <span class="font-semibold">Bônus Exclusivos Preservados</span>
+                        <span class="text-red-500 text-xl">+</span>
+                    </button>
+                    <div class="accordion-content px-4 pb-0">
+                        <p class="text-gray-600 text-sm mb-4">Você mantém o acesso à Formação em Psicossomática,
+                            Introdução à Psicanálise e todos os bônus que já conquistou.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-white rounded-lg overflow-hidden">
+                    <button class="accordion-trigger w-full p-4 text-left flex justify-between items-center"
+                        onclick="toggleAccordion(this)">
+                        <span class="font-semibold">Ferramentas de Intervenção</span>
+                        <span class="text-red-500 text-xl">+</span>
+                    </button>
+                    <div class="accordion-content px-4 pb-0">
+                        <p class="text-gray-600 text-sm mb-4">Os mais de 100 exercícios práticos continuam disponíveis
+                            para você aplicar em suas sessões sempre que precisar de uma nova abordagem.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-white rounded-lg overflow-hidden">
+                    <button class="accordion-trigger w-full p-4 text-left flex justify-between items-center"
+                        onclick="toggleAccordion(this)">
+                        <span class="font-semibold">Comunidade e Suporte</span>
+                        <span class="text-red-500 text-xl">+</span>
+                    </button>
+                    <div class="accordion-content px-4 pb-0">
+                        <p class="text-gray-600 text-sm mb-4">Continue fazendo parte da nossa comunidade, trocando
+                            experiências e tendo suporte na sua jornada profissional.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VANTAGEM FINANCEIRA -->
+    <section class="hero-bg text-white py-12 px-4">
+        <div class="max-w-sm mx-auto text-center">
+            <h2 class="text-2xl font-bold mb-6">Uma Condição Única para Alunos</h2>
+            <p class="text-lg leading-relaxed mb-8">
+                O valor público desta formação é de <span class="text-red-500 font-bold">R$ 3.500,00</span>. Mas como
+                você já é nosso aluno, queremos valorizar seu compromisso.
+            </p>
+
+            <div class="bg-gray-800 rounded-lg p-6 border-2 border-red-600 relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                    OPORTUNIDADE DE UPGRADE
+                </div>
+
+                <p class="text-gray-400 text-sm mb-2">Seu Investimento Hoje</p>
+                <p class="text-5xl font-black text-white mb-2 tracking-tight">R$ 997</p>
+                <p class="text-sm text-gray-300 mb-6">ou 12x de R$ 103,00</p>
+
+                <button onclick="document.getElementById('inicio').scrollIntoView({behavior: 'smooth'})"
+                    class="cta-button pulse-animation text-white font-bold py-4 px-8 rounded-lg text-lg w-full">
+                    QUERO O VITALÍCIO AGORA
+                </button>
+            </div>
+
+            <p class="text-xs text-gray-500 mt-6">
+                *Oferta válida por tempo limitado e exclusiva para alunos ativos.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ VITALÍCIO -->
+    <section class="bg-white py-12 px-4 pb-24">
+        <div class="max-w-sm mx-auto">
+            <h3 class="text-xl font-bold text-center mb-6">Dúvidas sobre o Upgrade</h3>
+
+            <div class="space-y-3">
+                <div class="accordion-item bg-gray-50 rounded-lg overflow-hidden">
+                    <button class="accordion-trigger w-full p-4 text-left flex justify-between items-center"
+                        onclick="toggleAccordion(this)">
+                        <span class="font-semibold text-sm">O que muda no meu acesso?</span>
+                        <span class="text-red-500 text-xl">+</span>
+                    </button>
+                    <div class="accordion-content px-4 pb-0">
+                        <p class="text-gray-600 text-sm mb-4">Basicamente, o "prazo de validade" deixa de existir. Você
+                            passa a ter acesso indeterminado ao curso e a todas as futuras atualizações que fizermos na
+                            plataforma.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-gray-50 rounded-lg overflow-hidden">
+                    <button class="accordion-trigger w-full p-4 text-left flex justify-between items-center"
+                        onclick="toggleAccordion(this)">
+                        <span class="font-semibold text-sm">Tenho garantia neste upgrade?</span>
+                        <span class="text-red-500 text-xl">+</span>
+                    </button>
+                    <div class="accordion-content px-4 pb-0">
+                        <p class="text-gray-600 text-sm mb-4">Sim! A garantia de 7 dias continua valendo. Se você achar
+                            que o vitalício não é para você, devolvemos o valor do upgrade.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STICKY CTA -->
+    <div class="sticky-cta p-4 border-t border-gray-200">
+        <div class="max-w-sm mx-auto flex items-center justify-between gap-4">
+            <div class="flex-1">
+                <p class="text-xs text-gray-500 line-through">R$ 3.500</p>
+                <p class="text-lg font-bold text-red-600">R$ 997</p>
+            </div>
+            <a href="https://chk.eduzz.com/ct3bnfee" target="_blank"
+                class="cta-button text-white font-bold py-3 px-6 rounded-lg text-sm flex-1 text-center shadow-lg">
+                UPGRADE VITALÍCIO
+            </a>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const isOpen = content.classList.contains('active');
+
+            // Close all other accordions
+            document.querySelectorAll('.accordion-content').forEach(c => {
+                c.classList.remove('active');
+                c.previousElementSibling.querySelector('span:last-child').textContent = '+';
+            });
+
+            if (!isOpen) {
+                content.classList.add('active');
+                button.querySelector('span:last-child').textContent = '-';
+            }
+        }
+    </script>
+</body>
+
+</html>
