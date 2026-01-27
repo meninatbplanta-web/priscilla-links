@@ -9,7 +9,7 @@ import {
     UserCheck
 } from 'lucide-react';
 
-const CHECKOUT_LINK = "https://chk.eduzz.com/iyejkuay";
+const CHECKOUT_LINK = "https://sun.eduzz.com/1W3ZKRN5W2";
 
 const Button = ({ children, className = '', ...props }: any) => (
     <a

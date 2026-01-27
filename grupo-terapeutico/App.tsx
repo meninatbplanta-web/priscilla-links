@@ -15,7 +15,7 @@ import {
 
 // --- Constants & Data ---
 
-const CHECKOUT_LINK = "https://chk.eduzz.com/39YDQ2QJ9O";
+const CHECKOUT_LINK = "https://sun.eduzz.com/7977R4A89E";
 const AUTHOR_IMAGE = "https://priscilla-moreira.com/imagens/priscilla-pdv-2.webp";
 // Using a relevant placeholder or just omitting the hero image if not provided, 
 // but the design expects one. I'll use a generic therapy/group image or the author image again if needed.
